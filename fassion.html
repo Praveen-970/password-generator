@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Outfit Suggester</title> <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Classic Outfit Suggester</h1> <p class="tagline">Find timeless inspiration for your next event!</p> <form id="suggestion-form">
+    <div class="form-group">
+        <label for="event-type">Select Event Type:</label>
+        <select id="event-type" name="event-type" required>
+            <option value="" disabled selected>--Please choose an event--</option>
+            <option value="wedding_guest">Wedding Guest (Day)</option>
+            <option value="wedding_guest_evening">Wedding Guest (Evening/Formal)</option>
+            <option value="festive_party">Festive Party (e.g., Diwali, Eid)</option>
+            <option value="cocktail_party">Cocktail Party</option>
+            <option value="business_formal">Business Formal</option>
+            <option value="business_casual">Business Casual</option>
+            <option value="casual_outing">Casual Outing (Day)</option>
+            <option value="casual_evening">Casual Evening</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Select Gender:</label>
+        <div class="radio-group">
+            <input type="radio" id="gender-woman" name="gender" value="woman" required>
+            <label for="gender-woman">Woman</label>
+            <input type="radio" id="gender-man" name="gender" value="man" required>
+            <label for="gender-man">Man</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="skin-tone">Select Skin Tone (for color ideas):</label>
+        <select id="skin-tone" name="skin-tone" required>
+            <option value="" disabled selected>--Choose for color ideas--</option>
+            <option value="fair_cool">Fair (Cool Undertones - pinkish/bluish)</option>
+            <option value="fair_warm">Fair (Warm Undertones - yellowish/golden)</option>
+            <option value="light_medium_cool">Light/Medium (Cool Undertones)</option>
+            <option value="light_medium_warm">Light/Medium (Warm Undertones)</option>
+            <option value="olive_neutral">Olive/Medium (Neutral Undertones)</option>
+            <option value="tan_deep_warm">Tan/Deep (Warm Undertones)</option>
+            <option value="tan_deep_cool">Tan/Deep (Cool Undertones)</option>
+            <option value="any">Any/Unsure</option>
+        </select>
+    </div>
+
+    <button type="submit" class="submit-button">Get Suggestions</button>
+</form>
+
+    <div id="results-area" class="results-area hidden">
+        <h2>Suggestions:</h2>
+        <div id="outfit-suggestion">
+            <h3>Outfit Idea:</h3>
+            <p id="outfit-text"></p>
+            <a id="outfit-link" href="#" target="_blank" class="g-search-link hidden">See Outfit Ideas on Google Images</a>
+        </div>
+        <hr>
+        <div id="shoe-suggestion">
+            <h3>Shoe Idea:</h3>
+            <p id="shoe-text"></p>
+            <a id="shoe-link" href="#" target="_blank" class="g-search-link hidden">See Shoe Ideas on Google Images</a>
+        </div>
+        <hr>
+        <div id="color-suggestion">
+            <h3>Suggested Colors:</h3>
+            <p id="color-text"></p>
+            <div id="color-swatches"></div>
+            <a id="color-link" href="#" target="_blank" class="g-search-link hidden">See Color Palette Ideas on Google Images</a>
+        </div>
+        <p class="disclaimer">
+            *These are general suggestions. Consider current trends, personal style, body type, and the specific event's dress code. Skin tone color suggestions are based on general color theory.*
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
