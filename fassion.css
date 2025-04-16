@@ -1,0 +1,222 @@
+/* Import Google Fonts defined in HTML head */
+
+:root {
+    /* Define base font families */
+    --font-body: 'Poppins', sans-serif;
+    --font-heading: 'Lora', serif;
+    /* Define colors */
+    --color-text: #333;
+    --color-heading: #2c3e50;
+    --color-background: #f5f5dc; /* Beige background */
+    --color-container-bg: #ffffff; /* White container */
+    --color-primary-accent: #5a8ecb; /* Softened Blue Accent */
+    --color-primary-accent-hover: #4a7aaf; /* Darker hover for accent */
+    --color-secondary-bg: #f8f9f9; /* Results area background */
+    --color-border: #dcdcdc; /* Slightly lighter border */
+    --color-google-link: #e74c3c;
+    --color-google-link-hover: #c0392b;
+    --color-shadow: rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--color-container-bg);
+    padding: 35px 45px; /* Slightly more padding */
+    border-radius: 8px; /* Slightly softer radius */
+    box-shadow: 0 5px 20px var(--color-shadow); /* Updated shadow */
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid var(--color-border); /* Subtle border */
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 35px; /* More space after tagline */
+    font-size: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 22px; /* Slightly more space */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Keep labels bold */
+    color: #34495e;
+    font-size: 0.9rem; /* Slightly smaller label */
+}
+
+.form-group select,
+.form-group input[type="text"] /* Style text inputs if added */ {
+    padding: 12px 15px; /* Increase padding */
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font-body); /* Ensure body font */
+    background-color: #fdfdfd; /* Slightly off-white input bg */
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-primary-accent);
+    box-shadow: 0 0 0 2px rgba(90, 142, 203, 0.2); /* Focus indicator */
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    padding: 5px 0; /* Add some padding */
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 8px; /* Increase space */
+    accent-color: var(--color-primary-accent); /* Use accent for radio */
+    cursor: pointer;
+}
+
+.radio-group label {
+    margin-right: 25px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1rem; /* Match input font size */
+    color: var(--color-text);
+}
+
+
+.submit-button {
+    background-color: var(--color-primary-accent);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600; /* Keep button bold */
+    font-family: var(--font-body); /* Ensure consistent font */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    margin-top: 15px; /* More space before button */
+}
+
+.submit-button:hover {
+    background-color: var(--color-primary-accent-hover);
+}
+
+.submit-button:active {
+    transform: scale(0.99); /* Subtle press effect */
+}
+
+.results-area {
+    margin-top: 35px; /* More space before results */
+    padding: 25px; /* More padding */
+    background-color: var(--color-secondary-bg);
+    border-radius: 8px;
+    border: 1px solid #e1e5e8;
+}
+
+.results-area h2 {
+    margin-bottom: 25px; /* More space */
+    border-bottom: 1px solid var(--color-primary-accent); /* Thinner border */
+    padding-bottom: 10px;
+    font-weight: 600; /* Bold results heading */
+}
+
+.results-area h3 {
+    color: #34495e;
+    margin-bottom: 10px; /* More space */
+    font-size: 1.2rem; /* Slightly larger subheading */
+    font-weight: 600;
+}
+
+.results-area p {
+    margin-bottom: 12px; /* Slightly more space */
+    color: #555;
+}
+
+.results-area hr {
+    border: none;
+    border-top: 1px solid #e1e5e8;
+    margin: 25px 0; /* More space around separators */
+}
+
+.g-search-link {
+    display: inline-block;
+    margin-top: 8px; /* More space */
+    padding: 6px 12px; /* Adjust padding */
+    background-color: var(--color-google-link);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600; /* Bolder link text */
+    transition: background-color 0.3s ease;
+}
+
+.g-search-link:hover {
+    background-color: var(--color-google-link-hover);
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+#color-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px; /* More space */
+    padding-top: 5px; /* Space above swatches */
+}
+
+.swatch {
+    width: 28px; /* Slightly smaller */
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.hidden {
+    display: none;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 25px; /* More space */
+    font-style: italic;
+    text-align: center; /* Center disclaimer */
+    padding: 0 10px; /* Add padding */
+}
